@@ -2,19 +2,19 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="NFL dataset", layout="wide", page_icon="data\JJGH.jpeg")
+st.set_page_config(page_title="NFL dataset", layout="wide", page_icon="data/JJGH.jpeg")
 
 st.title("JJGH Fantasy Player Comparison App")
 st.write("This app will help you analyze NFL data effectively.")
 
 
 def load_data():
-    data1=pd.read_csv('data\stats_player_week_2020.csv')
-    data2=pd.read_csv('data\stats_player_week_2021.csv')
-    data3=pd.read_csv('data\stats_player_week_2022.csv')
-    data4=pd.read_csv('data\stats_player_week_2023.csv')
-    data5=pd.read_csv('data\stats_player_week_2024.csv')
-    data6=pd.read_csv('data\stats_player_week_2025.csv')
+    data1=pd.read_csv('data/stats_player_week_2020.csv')
+    data2=pd.read_csv('data/stats_player_week_2021.csv')
+    data3=pd.read_csv('data/stats_player_week_2022.csv')
+    data4=pd.read_csv('data/stats_player_week_2023.csv')
+    data5=pd.read_csv('data/stats_player_week_2024.csv')
+    data6=pd.read_csv('data/stats_player_week_2025.csv')
     df=pd.concat([data1,data2,data3,data4,data5,data6])
     return df
 
@@ -34,7 +34,7 @@ name = st.multiselect(
     ["Joe Burrow","Puka Nacua","Deebo Samuel Sr.","Derrick Henry","TreVeyon Henderson","Sam LaPorta","Isiah Pacheco","Matthew Golden","Joe Mixon","Trevor Lawrence","Josh Palmer"],
 )
 
-st.sidebar.image("data\JJGH.jpeg", width=250)
+st.sidebar.image("data/JJGH.jpeg", width=250)
 years = st.sidebar.slider("Season", 2020, 2025, (2024, 2025))
 week = st.sidebar.slider("Week", 1, 22, (1, 18))
 
@@ -57,3 +57,4 @@ st.write("Brought to you by JJGH - There ain't no glory hole like a Jerry Jones 
 # st.image("https://upload.wikimedia.org/wikipedia/en/a/a2/National_Football_League_logo.svg", width=200)
 
 # st.image("data\JJGH.jpeg", width=100)
+
