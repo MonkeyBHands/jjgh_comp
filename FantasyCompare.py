@@ -14,7 +14,7 @@ def load_data():
     data3=pd.read_csv('data/NFL/stats_player_week_2022.csv')
     data4=pd.read_csv('data/NFL/stats_player_week_2023.csv')
     data5=pd.read_csv('data/NFL/stats_player_week_2024.csv')
-    data6=pd.read_csv('data/NFL/stats_player_week_2025.csv')
+    data6=pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv')
     df=pd.concat([data1,data2,data3,data4,data5,data6])
     return df
 
@@ -57,4 +57,5 @@ st.write("All data provided by https://github.com/nflverse/nflverse-data/release
 st.write("Brought to you by JJGH - There ain't no glory hole like a Jerry Jones Glory Hole!")
 # st.image("https://upload.wikimedia.org/wikipedia/en/a/a2/National_Football_League_logo.svg", width=200)
 # st.image("data/NFL/JJGH.jpeg", width=100)
+
 
