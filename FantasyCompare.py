@@ -7,7 +7,7 @@ st.set_page_config(page_title="NFL dataset", layout="wide", page_icon="data/NFL/
 st.title("JJGH Fantasy Player Comparison App")
 st.write("This app will help you analyze NFL data effectively.")
 
-@st.cache_data
+# @st.cache_data
 def load_data():
     data1=pd.read_csv('data/NFL/stats_player_week_2020.csv')
     data2=pd.read_csv('data/NFL/stats_player_week_2021.csv')
@@ -57,3 +57,4 @@ st.write("All data provided by https://github.com/nflverse/nflverse-data/release
 st.write("Brought to you by JJGH - There ain't no glory hole like a Jerry Jones Glory Hole!")
 # st.image("https://upload.wikimedia.org/wikipedia/en/a/a2/National_Football_League_logo.svg", width=200)
 # st.image("data/NFL/JJGH.jpeg", width=100)
+
